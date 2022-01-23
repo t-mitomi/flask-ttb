@@ -1,0 +1,32 @@
+<!-- 共通部ファイル -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Baseファイル付き</title>
+
+<!-- CSSの参照 -->
+<link rel="stylesheet" href="../static/css/style.css"  media="screen and (min-width:481px)">
+<link rel="stylesheet" href="../static/css/style_sp.css" media="screen and (max-width:480px)">
+
+<!-- jQuery -->
+<script src="../static/js/common.js"></script>
+
+</head>
+<body>
+    <header class="site-header">
+        <nav>
+            <ul class="menu">
+                <li>メニュー</li>
+            </ul>
+        </nav>
+    </header>
+    <!-- はめ込みのための記述 スペースの有無に注意しなさいな!? -->
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <p>Copyright &copy; TEAM STOP!ROADKILL all rights reserved.</p>
+    </footer>
+</body>
+</html>

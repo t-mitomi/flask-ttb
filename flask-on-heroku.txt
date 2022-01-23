@@ -1,0 +1,3 @@
+【Python入門9-2-1】HerokuでFlask製Webアプリをインターネット上に公開する方法 by西住工房
+https://www.youtube.com/watch?v=3aCnevS47a8
+
