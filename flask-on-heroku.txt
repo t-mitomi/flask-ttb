@@ -1,3 +1,51 @@
 【Python入門9-2-1】HerokuでFlask製Webアプリをインターネット上に公開する方法 by西住工房
 https://www.youtube.com/watch?v=3aCnevS47a8
 
+flask-ttbアプリ(ディレクトリ＝URL)
+
+Git インストール
+
+heroku アカウント
+
+(Mac:Homebrew)
+heroku CLIインストール
+heroku login
+heroku create アプリ名
+(app.pyのディレクトリで)
+下の３つのファイルも準備
+heroku git:remote -a flask-ttb
+git init
+git add .
+git commit -m "heroku ni flask"
+git push heroku main
+heroku open 又は https://flask-ttb.herokuapp.com/ にアクセス
+
+
+その他のコマンド
+'heroku'does not appear to bo a git repsitoryエラーには
+git remote add heroku https://git.heroku.com/flask-ttb.gitとアプリ名を用意する。
+heroku logs --tail
+heroku push
+herolu list
+heroku run コマンド
+heroku logout
+
+
+Procfile:
+web: gunicorn app:app --log-file=-
+
+requiremants.txt:
+click==8.0.3
+colorama==0.4.4
+Flask==2.0.2
+Flask-SQLAlchemy==2.5.1
+greenlet==1.1.2
+gunicorn==20.1.0
+itsdangerous==2.0.1
+Jinja2==3.0.3
+MarkupSafe==2.0.1
+Werkzeug==2.0.2
+
+runtime.txt:
+python-3.10.1
+
